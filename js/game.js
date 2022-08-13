@@ -166,7 +166,6 @@ function addPoints(layer, gain) {
 	player[layer].points = player[layer].points.add(gain).max(0)
 	if (player[layer].best) player[layer].best = player[layer].best.max(player[layer].points)
 	if (player[layer].total) player[layer].total = player[layer].total.add(gain)
-	if (hasUpgrade('p', 11)) gain = gain.times(2)
 }
 
 function generatePoints(layer, diff) {
