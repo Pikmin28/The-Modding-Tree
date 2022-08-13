@@ -1,8 +1,8 @@
 let modInfo = {
 	name: "The Pikmin Tree",
 	id: "mymod",
-	author: "nobody",
-	pointsName: "points",
+	author: "nobody important",
+	pointsName: "pellets",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
