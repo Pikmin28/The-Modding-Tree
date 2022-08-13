@@ -41,6 +41,6 @@ addLayer("p", {
             description: "Double your point gain.",
             cost: new Decimal(3)
         }
-    },
+    }
 })
 
