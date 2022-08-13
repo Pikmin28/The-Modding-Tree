@@ -24,5 +24,10 @@ addLayer("p", {
     hotkeys: [
         {key: "p", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+        11: {
+
+        },
+    },
 })
