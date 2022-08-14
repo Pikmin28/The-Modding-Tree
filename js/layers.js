@@ -27,17 +27,17 @@ addLayer("p", {
     layerShown(){return true},
     upgrades: {
         11: {
-            title: "Make this whatever you want!",
+            title: "Make whatever you want!",
             description: "Double your point gain.",
             cost: new Decimal(1)
         },
         12: {
-            title: "Make this whatever you want!",
+            title: "Make the psa you want!",
             description: "Double your point gain.",
             cost: new Decimal(2)
         },
         13: {
-            title: "Make this whatever you want!",
+            title: " this whatever you want!",
             description: "Double your point gain.",
             cost: new Decimal(3)
         },
