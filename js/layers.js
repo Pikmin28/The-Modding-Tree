@@ -36,7 +36,7 @@ addLayer("p", {
             description: "Double your point gain.",
             cost: new Decimal(2)
         },
-        12: {
+        13: {
             title: "Make this whatever you want!",
             description: "Double your point gain.",
             cost: new Decimal(3)
