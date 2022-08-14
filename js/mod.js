@@ -37,14 +37,17 @@ function canGenPoints(){
 	return true
 }
 if (hasUpgrade('p', 11)) gain = gain.times(2)
-// Calculate points/sec!
-function getPointGen() {
-	if(!canGenPoints())
-		return new Decimal(0)
 
-	let gain = new Decimal(1)
-	return gain
-}
+if (hasUpgrade('p', 12)) gain = gain.times(2)
+
+// Calculate points/sec!
+	function getPointGen() {
+		if (!canGenPoints())
+			return new Decimal(0)
+
+		let gain = new Decimal(1)
+		return gain
+	}
 
 // Add formatting to the effect
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
