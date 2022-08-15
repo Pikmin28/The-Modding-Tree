@@ -25,6 +25,10 @@ addLayer("p", {
         {key: "p", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
+    effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
     upgrades: {
         11: {
             title: "Send your red pikmin to collect pellets",
