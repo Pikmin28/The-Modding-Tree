@@ -26,22 +26,22 @@ addLayer("p", {
     ],
     layerShown(){return true},
     upgrades: {
-        10: {
+        11: {
             title: "Send your red pikmin to collect pellets",
             description: "Double your pellet gain.",
             cost: new Decimal(1)
         },
-        11: {
+        12: {
             title: "Pikmin overworking",
             description: "Double your pellet gain again.",
             cost: new Decimal(2)
         },
-        12: {
+        13: {
             title: "Send your pikmin to dangerous places.",
             description: "Guess what, double your pellet gain.",
             cost: new Decimal(4)
         },
-        13: {
+        14: {
             title: "Send your red pikmin to the fire zone.",
             description: "This is different, triple your pellet gain.",
             cost: new Decimal(9)
