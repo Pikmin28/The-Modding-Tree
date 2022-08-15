@@ -66,7 +66,7 @@ addLayer("q", {
         unlocked: true,
 		points: new Decimal(0), // Starting amount
     }},
-    color: "#4BDC12",
+    color: "#4BDCFF",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "red pikmin2", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
