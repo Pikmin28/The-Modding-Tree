@@ -25,10 +25,6 @@ addLayer("p", {
         {key: "p", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
-    effect() {
-        return player[this.layer].points.add(1).pow(0.5)
-    },
-    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
     upgrades: {
         11: {
             title: "Send your red pikmin to collect pellets",
@@ -38,7 +34,11 @@ addLayer("p", {
         12: {
             title: "Pikmin overworking",
             description: "Double your pellet gain again.",
-            cost: new Decimal(2)
+            cost: new Decimal(2),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
         13: {
             title: "Send your pikmin to dangerous places.",
