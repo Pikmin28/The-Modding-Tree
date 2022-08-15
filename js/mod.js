@@ -25,7 +25,7 @@ let changelog = `<h1>Changelog:</h1><br>
 let winText = `Congratulations! You have reached the end and beaten this game, but for now...`
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
-if (hasUpgrade('p', 11)) gain = gain.times(2)
+
 // (The ones here are examples, all official functions are already taken care of)
 var doNotCallTheseFunctionsEveryTick = ["blowUpEverything"]
 
@@ -37,9 +37,9 @@ function getStartPoints(){
 function canGenPoints(){
 	return true
 }
-if (hasUpgrade('p', 11)) gain = gain.times(2)
 
-if (hasUpgrade('p', 12)) gain = gain.times(2)
+
+
 
 // Calculate points/sec!
 	function getPointGen() {
@@ -47,6 +47,7 @@ if (hasUpgrade('p', 12)) gain = gain.times(2)
 			return new Decimal(0)
 
 		let gain = new Decimal(1)
+		if (hasUpgrade('p', 11)) gain = gain.times(2)
 		return gain
 	}
 
