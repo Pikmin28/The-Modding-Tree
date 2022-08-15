@@ -1,4 +1,4 @@
-if (hasUpgrade('p', 11)) gain = gain.times(2),
+if (hasUpgrade('p', 11)) gain = gain.times(2)
 
 addLayer("p", {
     name: "grow red pikmin", // This is optional, only used in a few places, If absent it just uses the layer id.
