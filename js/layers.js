@@ -1,3 +1,5 @@
+if (hasUpgrade('p', 11)) gain = gain.times(2),
+
 addLayer("p", {
     name: "grow red pikmin", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "RP", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -48,4 +50,4 @@ addLayer("p", {
         }
     }
 })
-if (hasUpgrade('p', 11)) gain = gain.times(2)
+
