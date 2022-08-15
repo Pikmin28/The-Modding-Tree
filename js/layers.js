@@ -34,11 +34,7 @@ addLayer("p", {
         12: {
             title: "Pikmin overworking",
             description: "Double your pellet gain again.",
-            cost: new Decimal(2),
-            effect() {
-                return player[this.layer].points.add(1).pow(0.5)
-            },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
+            cost: new Decimal(2)
         },
         13: {
             title: "Send your pikmin to dangerous places.",
@@ -48,7 +44,11 @@ addLayer("p", {
         14: {
             title: "Send your red pikmin to the fire zone.",
             description: "This is different, triple your pellet gain.",
-            cost: new Decimal(9)
+            cost: new Decimal(9),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         }
     }
 })
