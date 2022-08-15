@@ -1,5 +1,3 @@
-if (hasUpgrade('p', 11)) gain = gain.times(2)
-
 addLayer("p", {
     name: "grow red pikmin", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "RP", // This appears on the layer's node. Default is the id with the first letter capitalized
@@ -17,6 +15,7 @@ addLayer("p", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        if (hasUpgrade('p', 11)) gain = gain.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
