@@ -69,7 +69,7 @@ addLayer("q", {
     color: "#4BDC12",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
     resource: "red pikmin2", // Name of prestige currency
-    baseResource: "pellets2", // Name of resource prestige is based on
+    baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
