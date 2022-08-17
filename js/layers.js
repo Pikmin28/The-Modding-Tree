@@ -75,7 +75,7 @@ addLayer("q", {
 		points: new Decimal(0), // Starting amount
     }},
     color: "#4BDCFF",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account
+    requires: new Decimal(400), // Can be a function that takes requirement increases into account
     resource: "red Onion", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.p.points}, // Get the current amount of baseResource
@@ -94,22 +94,22 @@ addLayer("q", {
     ],
     layerShown(){return true},
     upgrades: {
-        20: {
+        11: {
             title: "first tribute",
             description: "Double your pellet gain.",
             cost: new Decimal(1)
         },
-        21: {
+        12: {
             title: "Systematic overworking",
             description: "Double your pellet gain.",
             cost: new Decimal(2)
         },
-        22: {
+        13: {
             title: "Conquer dangerous places.",
             description: "Guess what, double your pellet gain.",
             cost: new Decimal(4)
         },
-        23: {
+        14: {
             title: "Examine fruit.",
             description: "This is different, but still boosts your pellet gain.",
             cost: new Decimal(9),
@@ -118,12 +118,12 @@ addLayer("q", {
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
-        24: {
+        15: {
             title: "Avoid the water.",
             description: "This will triple your pellet gain.",
             cost: new Decimal(19)
         },
-        25: {
+        16: {
             title: "Supremacy.",
             description: "Simply worth trying.",
             cost: new Decimal(200),
