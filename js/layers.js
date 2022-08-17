@@ -92,5 +92,45 @@ addLayer("q", {
     hotkeys: [
         {key: "q", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+        17: {
+            title: "Send your red pikmin to collect pellets",
+            description: "Double your pellet gain.",
+            cost: new Decimal(1)
+        },
+        18: {
+            title: "Pikmin overworking",
+            description: "Double your pellet gain again.",
+            cost: new Decimal(2)
+        },
+        19: {
+            title: "Send your pikmin to dangerous places.",
+            description: "Guess what, double your pellet gain.",
+            cost: new Decimal(4)
+        },
+        20: {
+            title: "Send your red pikmin to the fire zone.",
+            description: "This is different, but still boosts your pellet gain.",
+            cost: new Decimal(9),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
+        },
+        21: {
+            title: "Send your red pikmin to the pellets actual location.",
+            description: "This will triple your pellet gain... and maybe your IQ.",
+            cost: new Decimal(19)
+        },
+        22: {
+            title: "Send yourself to the fire zone.",
+            description: "This is worth trying, but it's slightly more worrisome.",
+            cost: new Decimal(200),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x*2" }
+        }
+    }
 })
