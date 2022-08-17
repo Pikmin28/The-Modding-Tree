@@ -60,7 +60,7 @@ addLayer("p", {
             description: "This is worth trying, but it's slightly more worrisome.",
             cost: new Decimal(200),
             effect() {
-                return player[this.layer].points.add(1).pow(0.6)
+                return player[this.layer].points.add(1).pow(0.5)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x*2" }
         }
