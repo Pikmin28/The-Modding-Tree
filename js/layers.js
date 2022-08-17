@@ -67,7 +67,7 @@ addLayer("p", {
     }
 })
 addLayer("q", {
-    name: "grow red pikmin2", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "grow red Onions", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "0", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -76,10 +76,11 @@ addLayer("q", {
     }},
     color: "#4BDCFF",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
-    resource: "red pikmin2", // Name of prestige currency
+    resource: "red Onion", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.p.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
+    mult: .5,
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
