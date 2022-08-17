@@ -15,7 +15,6 @@ addLayer("p", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-        if (hasUpgrade('p', 15)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -59,7 +58,11 @@ addLayer("p", {
         16: {
             title: "Send your red piaaaakmin to the fire zone.",
             description: "This is different, triple your mom.",
-            cost: new Decimal(200)
+            cost: new Decimal(200),
+            effect() {
+                return player[this.layer].points.add(1).pow(0.5)
+            },
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         }
     }
 })
