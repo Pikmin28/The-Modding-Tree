@@ -43,7 +43,7 @@ addLayer("p", {
         },
         14: {
             title: "Send your red pikmin to the fire zone.",
-            description: "This is different, triple your pellet gain.",
+            description: "This is different, but still boosts your pellet gain.",
             cost: new Decimal(9),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
@@ -52,12 +52,12 @@ addLayer("p", {
         },
         15: {
             title: "Send your red pikmin to the pellets actual location.",
-            description: "This is different, triple your pellet gain... and maybe your IQ.",
+            description: "This will triple your pellet gain... and maybe your IQ.",
             cost: new Decimal(19)
         },
         16: {
             title: "Send yourself to the fire zone.",
-            description: "This is different, it's slightly more worrisome.",
+            description: "This is worth trying, but it's slightly more worrisome.",
             cost: new Decimal(200),
             effect() {
                 return player[this.layer].points.add(1).pow(0.6)
