@@ -114,7 +114,7 @@ addLayer("q", {
             description: "This is different, but still boosts your pellet gain.",
             cost: new Decimal(9),
             effect() {
-                return player[this.layer].points.add(1).pow(0.5)
+                return player[this.layer].points.add(2).pow(0.25)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
@@ -128,7 +128,7 @@ addLayer("q", {
             description: "Simply worth trying.",
             cost: new Decimal(200),
             effect() {
-                return player[this.layer].points.add(1).pow(0.5)
+                return player[this.layer].points.add(2).pow(0.25)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x*2" }
         }
