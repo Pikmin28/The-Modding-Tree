@@ -55,6 +55,11 @@ addLayer("p", {
             title: "Send your red piaaaakmin to the fire zone.",
             description: "This is different, triple your pellet gain.",
             cost: new Decimal(19)
+        },
+        16: {
+            title: "Send your red piaaaakmin to the fire zone.",
+            description: "This is different, triple your mom.",
+            cost: new Decimal(200)
         }
     }
 })
