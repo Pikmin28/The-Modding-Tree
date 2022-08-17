@@ -51,24 +51,24 @@ addLayer("p", {
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
         15: {
-            title: "Send your red piaaaakmin to the fire zone.",
-            description: "This is different, triple your pellet gain.",
+            title: "Send your red pikmin to the pellets actual location.",
+            description: "This is different, triple your pellet gain... and maybe your IQ.",
             cost: new Decimal(19)
         },
         16: {
-            title: "Send your red piaaaakmin to the fire zone.",
-            description: "This is different, triple your mom.",
+            title: "Send yourself to the fire zone.",
+            description: "This is different, it's slightly more worrisome.",
             cost: new Decimal(200),
             effect() {
-                return player[this.layer].points.add(1).pow(0.5)
+                return player[this.layer].points.add(1).pow(0.6)
             },
-            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
+            effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x*2" }
         }
     }
 })
 addLayer("q", {
     name: "grow red pikmin2", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "RE", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "0", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
