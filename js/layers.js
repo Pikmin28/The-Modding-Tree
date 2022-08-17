@@ -95,22 +95,22 @@ addLayer("q", {
     layerShown(){return true},
     upgrades: {
         20: {
-            title: "Send your red pikmin to collect pellets",
+            title: "first tribute",
             description: "Double your pellet gain.",
             cost: new Decimal(1)
         },
         21: {
-            title: "Pikmin overworking",
-            description: "Double your pellet gain again.",
+            title: "Systematic overworking",
+            description: "Double your pellet gain.",
             cost: new Decimal(2)
         },
         22: {
-            title: "Send your pikmin to dangerous places.",
+            title: "Conquer dangerous places.",
             description: "Guess what, double your pellet gain.",
             cost: new Decimal(4)
         },
         23: {
-            title: "Send your red pikmin to the fire zone.",
+            title: "Examine fruit.",
             description: "This is different, but still boosts your pellet gain.",
             cost: new Decimal(9),
             effect() {
@@ -119,13 +119,13 @@ addLayer("q", {
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
         24: {
-            title: "Send your red pikmin to the pellets actual location.",
-            description: "This will triple your pellet gain... and maybe your IQ.",
+            title: "Avoid the water.",
+            description: "This will triple your pellet gain.",
             cost: new Decimal(19)
         },
         25: {
-            title: "Send yourself to the fire zone.",
-            description: "This is worth trying, but it's slightly more worrisome.",
+            title: "Supremacy.",
+            description: "Simply worth trying.",
             cost: new Decimal(200),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
@@ -144,14 +144,14 @@ addLayer("x", {
 		points: new Decimal(0), // Starting amount
     }},
     color: "#FFDCFF",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account
+    requires: new Decimal(50), // Can be a function that takes requirement increases into account
     resource: "red Onion", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.p.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 1.25, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
-        mult = new Decimal(.01)
+        mult = new Decimal(.1)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
