@@ -172,7 +172,10 @@ addLayer("x", {
     effect() {
         return {  cat: player[this.layer].points.add(1).pow(0.33)
     }},
-    effectDisplay() { return format(cat)+"x" },
+    effectDescription() { // Optional text to describe the effects
+        eff = this.effect();
+        return "which are boosting waffles by "+format(eff.cat)+" and increasing the Ice Cream cap by "+format(eff.cat)
+    },
     upgrades: {
         11: {
             title: "Send your red pikmin to collect pellets",
