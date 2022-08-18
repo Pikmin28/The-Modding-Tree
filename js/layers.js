@@ -20,7 +20,7 @@ addLayer("p", {
         if (hasUpgrade('x', 13)) mult = mult.times(4)
         if (hasUpgrade('x', 14)) mult = mult.times(upgradeEffect('x', 14))
         if (hasUpgrade('x', 15)) mult = mult.times(2)
-        if (hasUpgrade('x', 16)) mult = mult.times(2)
+        if (hasUpgrade('x', 16)) mult = mult.times(upgradeEffect('x', 16))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -128,7 +128,7 @@ addLayer("q", {
         15: {
             title: "Avoid the water.",
             description: "This will triple your pellet gain.",
-            cost: new Decimal(19)
+            cost: new Decimal(50)
         },
         16: {
             title: "Supremacy.",
@@ -197,7 +197,7 @@ addLayer("x", {
         15: {
             title: "Send your red pikmin to the pellets actual location.",
             description: "This will triple your pellet gain... and maybe your IQ.",
-            cost: new Decimal(19)
+            cost: new Decimal(100)
         },
         16: {
             title: "Send yourself to the fire zone.",
