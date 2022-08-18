@@ -39,7 +39,6 @@ function canGenPoints(){
 }
 
 
-player[this.layer].upgrades = upgrades
 
 // Calculate points/sec!
 	function getPointGen() {
