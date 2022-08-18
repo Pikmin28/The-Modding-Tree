@@ -8,7 +8,7 @@ addLayer("p", {
     }},
     color: "#4BDC13",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
-    resource: "red pikmin", // Name of prestige currency
+    resource: "Red Pikmin", // Name of prestige currency
     baseResource: "pellets", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
@@ -21,6 +21,7 @@ addLayer("p", {
         if (hasUpgrade('x', 14)) mult = mult.times(upgradeEffect('x', 14))
         if (hasUpgrade('x', 15)) mult = mult.times(2)
         if (hasUpgrade('x', 16)) mult = mult.times(upgradeEffect('x', 16))
+        mult = mult.times(eff.cat)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -82,7 +83,7 @@ addLayer("q", {
     }},
     color: "#4BDCFF",
     requires: new Decimal(400), // Can be a function that takes requirement increases into account
-    resource: "red Onion", // Name of prestige currency
+    resource: "Red Onion", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.p.points}, // Get the current amount of baseResource
     type: "static", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
@@ -143,12 +144,12 @@ addLayer("q", {
 })
 
 addLayer("x", {
-    name: "grow buds", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "grow Buds", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "B", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(0), // Starting amount
+		points: new Decimal(10), // Starting amount
     }},
     color: "#FFDCFF",
     requires: new Decimal(315), // Can be a function that takes requirement increases into account
