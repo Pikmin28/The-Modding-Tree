@@ -62,12 +62,12 @@ player[this.layer].upgrades = upgrades
 		if (hasUpgrade('q', 15)) gain = gain.times(3)
 		if (hasUpgrade('q', 16)) gain = gain.times(2*upgradeEffect('q', 16))
 		//parse
-		if (hasUpgrade('x', 30)) gain = gain.times(2)
-		if (hasUpgrade('x', 31)) gain = gain.times(2)
-		if (hasUpgrade('x', 32)) gain = gain.times(2)
-		if (hasUpgrade('x', 33)) gain = gain.times(upgradeEffect('x', 33))
-		if (hasUpgrade('x', 34)) gain = gain.times(3)
-		if (hasUpgrade('x', 35)) gain = gain.times(2*upgradeEffect('x', 35))
+		if (hasUpgrade('x', 11)) gain = gain.times(2)
+		if (hasUpgrade('x', 12)) gain = gain.times(2)
+		if (hasUpgrade('x', 13)) gain = gain.times(2)
+		if (hasUpgrade('x', 14)) gain = gain.times(upgradeEffect('x', 14))
+		if (hasUpgrade('x', 15)) gain = gain.times(3)
+		if (hasUpgrade('x', 16)) gain = gain.times(2*upgradeEffect('x', 16))
 		return gain
 	}
 
