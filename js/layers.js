@@ -1,5 +1,5 @@
 addLayer("p", {
-    name: "grow red pikmin", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "grow Red Pikmin", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "RP", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -73,7 +73,7 @@ addLayer("p", {
     }
 })
 addLayer("q", {
-    name: "grow red Onions", // This is optional, only used in a few places, If absent it just uses the layer id.
+    name: "grow Red Onions", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "0", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
@@ -144,7 +144,7 @@ addLayer("q", {
 
 addLayer("x", {
     name: "grow buds", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "b", // This appears on the layer's node. Default is the id with the first letter capitalized
+    symbol: "B", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
@@ -152,7 +152,7 @@ addLayer("x", {
     }},
     color: "#FFDCFF",
     requires: new Decimal(315), // Can be a function that takes requirement increases into account
-    resource: "red buds", // Name of prestige currency
+    resource: "Red Buds", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.p.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
