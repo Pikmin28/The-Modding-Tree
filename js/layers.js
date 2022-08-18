@@ -97,7 +97,7 @@ addLayer("q", {
     },
     row: 1, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "o", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "o", description: "P: Lose everyone to find new onions", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
     upgrades: {
@@ -152,7 +152,7 @@ addLayer("x", {
     }},
     color: "#FFDCFF",
     requires: new Decimal(315), // Can be a function that takes requirement increases into account
-    resource: "red Onion", // Name of prestige currency
+    resource: "red buds", // Name of prestige currency
     baseResource: "red pikmin", // Name of resource prestige is based on
     baseAmount() {return player.p.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
@@ -169,6 +169,10 @@ addLayer("x", {
         {key: "o", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
+    effect() {
+        return player[this.layer].points.add(1).pow(0.33)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" },
     upgrades: {
         11: {
             title: "Send your red pikmin to collect pellets",
