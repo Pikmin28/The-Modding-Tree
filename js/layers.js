@@ -149,7 +149,7 @@ addLayer("x", {
     position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(10), // Starting amount
+		points: new Decimal(0), // Starting amount
     }},
     color: "#FFDCFF",
     requires: new Decimal(315), // Can be a function that takes requirement increases into account
