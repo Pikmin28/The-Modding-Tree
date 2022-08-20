@@ -227,7 +227,7 @@ addLayer("x", {
             unlocked: false,
             points: new Decimal(0), // Starting amount
         }},
-        unlocked() { if (hasUpgrade("x", 13)) return true},
+        unlocked() { return (hasUpgrade("x", 13)) },
         color: "#FFDCFF",
         requires: new Decimal(315), // Can be a function that takes requirement increases into account
         resource: "Red Buds", // Name of prestige currency
