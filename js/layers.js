@@ -224,13 +224,11 @@ addLayer("x", {
         symbol: "W", // This appears on the layer's node. Default is the id with the first letter capitalized
         position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
         startData() { return {
-            unlocked: false,
+            unlocked: true,
             points: new Decimal(0), // Starting amount
         }},
-        unlocked() { return format(hasUpgrade("x", 13)) },
-        layerShown() {
-            return false
-        },
+        
+        
         color: "#FFDCFF",
         requires: new Decimal(315), // Can be a function that takes requirement increases into account
         resource: "Red Buds", // Name of prestige currency
@@ -249,7 +247,7 @@ addLayer("x", {
         hotkeys: [
             {key: "o", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
-        layerShown(){return true},
+        layerShown(){return player[this.layer].unlocked || hasUpgrade("x", 13)},
         effect() {
             return {  cat: player[this.layer].points.add(1).pow(0.33)
         }},
