@@ -225,6 +225,7 @@ addLayer("x", {
         position: 1, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
         startData() { return {
             unlocked: false,
+            layerShown: false,
             points: new Decimal(0), // Starting amount
         }},
         unlocked() { return format(hasUpgrade("x", 13)) },
