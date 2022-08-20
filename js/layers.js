@@ -229,7 +229,7 @@ addLayer("x", {
         }},
         unlocked() { return format(hasUpgrade("x", 13)) },
         layerShown() {
-            return player[this.layer].unlocked || hasUpgrade("x", 13)
+            return player[this.layer].unlocked && hasUpgrade("x", 13)
         },
         color: "#FFDCFF",
         requires: new Decimal(315), // Can be a function that takes requirement increases into account
