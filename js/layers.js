@@ -17,7 +17,6 @@ addLayer("p", {
         mult = new Decimal(1)
         if (hasUpgrade('x', 11)) mult = mult.times(2)
         if (hasUpgrade('x', 12)) mult = mult.times(3)
-        if (hasUpgrade('x', 13)) mult = mult.times(4)
         if (hasUpgrade('x', 14)) mult = mult.times(upgradeEffect('x', 14))
         if (hasUpgrade('x', 15)) mult = mult.times(2)
         if (hasUpgrade('x', 16)) mult = mult.times(upgradeEffect('x', 16))
@@ -105,7 +104,7 @@ addLayer("q", {
         11: {
             title: "first tribute",
             description: "Double your pellet gain.",
-            cost: new Decimal(1)
+            cost: new Decimal(1 * upgradeEffect('x', 16))
         },
         12: {
             title: "Systematic overworking",
@@ -194,11 +193,11 @@ addLayer("x", {
             cost: new Decimal(4)
         },
         14: {
-            title: "Study buds.",
+            title: "Study studies.",
             description: ".",
             cost: new Decimal(9),
             effect() {
-                return player[this.layer].points.add(1).pow(0.33)
+                return player[w].points.add(1).pow(0.33)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
@@ -290,9 +289,9 @@ addLayer("x", {
                 description: "",
                 cost: new Decimal(200),
                 effect() {
-                    return player[this.layer].points.add(1).pow(0.5)
+                    return player[this.layer].points.add(1).pow(0.1)
                 },
-                effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x*2" }
+                effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"^" }
             }
         }
     
