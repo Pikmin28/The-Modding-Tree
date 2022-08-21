@@ -104,7 +104,7 @@ addLayer("q", {
         11: {
             title: "first tribute",
             description: "Double your pellet gain.",
-            cost: new Decimal(1 * upgradeEffect('x', 16))
+            cost: new Decimal(1)
         },
         12: {
             title: "Systematic overworking",
