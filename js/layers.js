@@ -227,7 +227,7 @@ addLayer("x", {
             points: new Decimal(0), // Starting amount
         }},
         
-        unlocked() {return hasUpgrade("x", 13)},
+        unlocked() {return player[this.layer].unlocked && hasUpgrade("x", 13)},
         color: "#FFDCFF",
         requires: new Decimal(315), // Can be a function that takes requirement increases into account
         resource: "New hope", // Name of prestige currency
