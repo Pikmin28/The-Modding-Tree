@@ -238,7 +238,7 @@ addLayer("x", {
         gainMult() { // Calculate the multiplier for main currency from bonuses
             mult = new Decimal(1)
             if (player.x.unlocked) mult = mult.times(tmp.x.effect.cat)
-            if (player.w.unlocked) mult = mult.times(tmp.w.effect.cat ^ 25)
+            if (player.w.unlocked) mult = mult.times(tmp.w.effect.cat)
             return mult
         },
         gainExp() { // Calculate the exponent on main currency from bonuses
