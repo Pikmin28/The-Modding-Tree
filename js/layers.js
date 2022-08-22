@@ -19,7 +19,6 @@ addLayer("p", {
         if (hasUpgrade('x', 12)) mult = mult.times(3)
         if (hasUpgrade('x', 14)) mult = mult.times(upgradeEffect('x', 14))
         if (hasUpgrade('x', 15)) mult = mult.times(2)
-        if (hasUpgrade('x', 16)) mult = mult.times(upgradeEffect('x', 16))
         if (player.x.unlocked) mult = mult.times(tmp.x.effect.cat)
         return mult
     },

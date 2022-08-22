@@ -54,7 +54,7 @@ function canGenPoints(){
 		if (hasUpgrade('p', 15)) gain = gain.times(3)
 		if (hasUpgrade('p', 16)) gain = gain.times(2*upgradeEffect('p', 16))
 		//parse
-		if (hasUpgrade('q', 11)) gain = gain.times(3)
+		if (hasUpgrade('q', 11)) gain = gain.times(3*upgradeEffect('x', 16))
 		if (hasUpgrade('q', 12)) gain = gain.times(2)
 		if (hasUpgrade('q', 13)) gain = gain.times(2)
 		if (hasUpgrade('q', 14)) gain = gain.times(upgradeEffect('q', 14))
