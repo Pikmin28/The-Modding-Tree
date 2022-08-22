@@ -227,7 +227,7 @@ addLayer("x", {
             points: new Decimal(0), // Starting amount
         }},
         
-        
+        unlocked() {hasUpgrade("x", 13)},
         color: "#FFDCFF",
         requires: new Decimal(315), // Can be a function that takes requirement increases into account
         resource: "New hope", // Name of prestige currency
@@ -252,7 +252,7 @@ addLayer("x", {
         passiveGeneration() {return .1},
         effect() {
             return {cat: player[this.layer].points.add(1).pow(0.04*tmp.w.effect.cat),
-                mat: player[this.layer].points.add(1).pow(0.04*tmp.w.effect.cat)
+                mat: player[this.layer].points.add(25).pow(0.04*tmp.w.effect.cat)
         }},
         effectDescription() { // Optional text to describe the effects
             eff = this.effect();
