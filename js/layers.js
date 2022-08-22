@@ -237,7 +237,7 @@ addLayer("x", {
         gainMult() { // Calculate the multiplier for main currency from bonuses
             mult = new Decimal(1)
             if (player.x.unlocked) mult = mult.times(tmp.x.effect.cat)
-            if (player.w.unlocked) mult = mult.times(tmp.w.effect.cat)
+            if (player.w.unlocked) mult = mult.times(tmp.w.effect.cat * 25)
             return mult
         },
         gainExp() { // Calculate the exponent on main currency from bonuses
@@ -250,7 +250,7 @@ addLayer("x", {
         layerShown(){return player[this.layer].unlocked && hasUpgrade("x", 13)},
         passiveGeneration() {return .1},
         effect() {
-            return {  cat: player[this.layer].points.add(1).pow(0.33)
+            return {  cat: player[this.layer].points.add(1).pow(0.04)
         }},
         effectDescription() { // Optional text to describe the effects
             eff = this.effect();
