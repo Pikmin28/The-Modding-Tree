@@ -193,11 +193,11 @@ addLayer("x", {
             cost: new Decimal(4)
         },
         14: {
-            title: "Study studies.",
+            title: "Exploration.",
             description: ".",
-            cost: new Decimal(9),
+            cost: new Decimal(12),
             effect() {
-                return player[this.layer].points.add(1).pow(0.33)
+                return player[this.layer].points.add(1).pow(0.5)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
@@ -261,7 +261,7 @@ addLayer("x", {
             11: {
                 title: "Sun lord",
                 description: "",
-                cost: new Decimal(100000)
+                cost: new Decimal(1000000)
             }
         }
         
@@ -274,10 +274,10 @@ addLayer("l", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(10), // Starting amount
+		points: new Decimal(0), // Starting amount
     }},
     color: "#4BDC13",
-    requires: new Decimal(10), // Can be a function that takes requirement increases into account
+    requires: new Decimal(15), // Can be a function that takes requirement increases into account
     resource: "Land", // Name of prestige currency
     baseResource: "red onion", // Name of resource prestige is based on
     baseAmount() {return player.q.points}, // Get the current amount of baseResource
@@ -294,7 +294,7 @@ addLayer("l", {
     hotkeys: [
         {key: "p", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true},
+    layerShown(){return player[this.layer].unlocked && hasUpgrade("1", 14) && hasUpgrade("w", 11)},
     effect() {
         return {  bat: player[this.layer].points.add(1).pow(2)
     }},
