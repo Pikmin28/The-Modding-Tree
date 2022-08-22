@@ -294,7 +294,7 @@ addLayer("l", {
     hotkeys: [
         {key: "p", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return player[this.layer].unlocked && hasUpgrade("1", 14) && hasUpgrade("w", 11)},
+    layerShown(){return player[this.layer].unlocked && hasUpgrade("w", 11)},
     effect() {
         return {  bat: player[this.layer].points.add(1).pow(2)
     }},
