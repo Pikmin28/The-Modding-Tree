@@ -236,6 +236,8 @@ addLayer("x", {
         exponent: 1.25, // Prestige currency exponent
         gainMult() { // Calculate the multiplier for main currency from bonuses
             mult = new Decimal(1)
+            if (player.x.unlocked) mult = mult.times(tmp.x.effect.cat)
+            if (player.w.unlocked) mult = mult.times(tmp.w.effect.cat)
             return mult
         },
         gainExp() { // Calculate the exponent on main currency from bonuses
@@ -258,7 +260,7 @@ addLayer("x", {
             11: {
                 title: "Sun lord",
                 description: "",
-                cost: new Decimal(1000)
+                cost: new Decimal(100000)
             }
         }
     
