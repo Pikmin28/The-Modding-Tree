@@ -246,6 +246,7 @@ addLayer("x", {
             {key: "o", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return player[this.layer].unlocked && hasUpgrade("x", 13)},
+        passiveGeneration() {return .1},
         effect() {
             return {  cat: player[this.layer].points.add(1).pow(0.33)
         }},
@@ -255,42 +256,9 @@ addLayer("x", {
         },
         upgrades: {
             11: {
-                title: "budding pikmin",
+                title: "Sun lord",
                 description: "",
-                cost: new Decimal(1)
-            },
-            12: {
-                title: "proper pollination",
-                description: "",
-                cost: new Decimal(2)
-            },
-            13: {
-                title: "budding religion.",
-                description: "Opens blind hope.",
-                cost: new Decimal(4)
-            },
-            14: {
-                title: "Study buds.",
-                description: ".",
-                cost: new Decimal(9),
-                effect() {
-                    return player[this.layer].points.add(1).pow(0.33)
-                },
-                effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
-            },
-            15: {
-                title: "worship 101",
-                description: "This will triple your pellet gain... and maybe your IQ.",
-                cost: new Decimal(100)
-            },
-            16: {
-                title: "Advanced scacrifice",
-                description: "",
-                cost: new Decimal(200),
-                effect() {
-                    return player[this.layer].points.add(1).pow(0.1)
-                },
-                effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"^" }
+                cost: new Decimal(1000)
             }
         }
     
