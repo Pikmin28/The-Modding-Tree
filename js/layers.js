@@ -89,7 +89,7 @@ addLayer("q", {
     exponent: 1, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-        if (player.l.unlocked) mult = mult.times(tmp.l.effect.bat)
+        if (player.l.unlocked) mult = mult.times(1/tmp.l.effect.bat)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
