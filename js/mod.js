@@ -60,6 +60,7 @@ function canGenPoints(){
 		if (hasUpgrade('q', 14)) gain = gain.times(upgradeEffect('q', 14))
 		if (hasUpgrade('q', 15)) gain = gain.times(3)
 		if (hasUpgrade('q', 16)) gain = gain.times(2*upgradeEffect('q', 16))
+		if (player.l.unlocked) gain = gain.times(tmp.l.effect.bat)
 		//parse
 		return gain
 	}
