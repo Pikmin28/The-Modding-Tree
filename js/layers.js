@@ -120,7 +120,7 @@ addLayer("q", {
             description: "This is different, but still boosts your pellet gain.",
             cost: new Decimal(9),
             effect() {
-                return player[this.layer].points.add(2).pow(0.25)
+                return player[this.layer].points.add(2 * tmp.w.effect.cat).pow(0.25)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }
         },
@@ -134,7 +134,7 @@ addLayer("q", {
             description: "Simply worth trying.",
             cost: new Decimal(200),
             effect() {
-                return player[this.layer].points.add(2).pow(0.25)
+                return player[this.layer].points.add(1).pow(1)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x*2" }
         }
@@ -230,8 +230,8 @@ addLayer("x", {
         
         color: "#FFDCFF",
         requires: new Decimal(315), // Can be a function that takes requirement increases into account
-        resource: "Red Buds", // Name of prestige currency
-        baseResource: "red pikmin", // Name of resource prestige is based on
+        resource: "New hope", // Name of prestige currency
+        baseResource: "red pellets", // Name of resource prestige is based on
         baseAmount() {return player.points}, // Get the current amount of baseResource
         type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
         exponent: 1.25, // Prestige currency exponent
@@ -255,7 +255,7 @@ addLayer("x", {
         }},
         effectDescription() { // Optional text to describe the effects
             eff = this.effect();
-            return "which are boosting red pikmin by "+format(eff.cat)
+            return "which are boosting buds by "+format(eff.cat)
         },
         upgrades: {
             11: {
