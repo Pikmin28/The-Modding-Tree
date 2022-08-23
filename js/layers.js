@@ -248,7 +248,9 @@ addLayer("x", {
             {key: "o", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return player[this.layer].unlocked && hasUpgrade("x", 13)},
-        passiveGeneration() {return .1},
+        passiveGeneration() {
+            if(layerShown)
+            return .1},
         effect() {
             if(layerShown)
             return {cat: player[this.layer].points.add(1).pow(0.04*2),
