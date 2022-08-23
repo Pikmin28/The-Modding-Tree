@@ -30,6 +30,18 @@ addLayer("p", {
         {key: "p", description: "P: Lose you pellets to grow red pikmin", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     layerShown(){return true},
+    softcap() {
+        let softcap2 = new Decimal(.01)
+
+        
+        return softcap2
+    },
+    softcapPower() {
+        let softcappower2 = new Decimal(.01)
+
+
+        return softcappower2
+    },
     upgrades: {
         11: {
             title: "Send your red pikmin to collect pellets",
