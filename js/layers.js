@@ -4,7 +4,7 @@ addLayer("p", {
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
-		points: new Decimal(315), // Starting amount
+		points: new Decimal(0), // Starting amount
     }},
     color: "#4BDC13",
     requires: new Decimal(10), // Can be a function that takes requirement increases into account
@@ -249,7 +249,8 @@ addLayer("x", {
         ],
         layerShown(){return player[this.layer].unlocked && hasUpgrade("x", 13)},
         passiveGeneration() {
-            if(tmp.w.points > 1) return .1},
+            if(tmp.w.points > 1)
+             return .1},
         effect() {
             if(layerShown)
             return {cat: player[this.layer].points.add(1).pow(0.04*2),
