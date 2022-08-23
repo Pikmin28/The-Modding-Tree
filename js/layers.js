@@ -31,13 +31,13 @@ addLayer("p", {
     ],
     layerShown(){return true},
     softcap() {
-        let softcap2 = new Decimal(500000)
+        let softcap2 = new Decimal(100000)
 
         
         return softcap2
     },
     softcapPower() {
-        let softcappower2 = new Decimal(.01)
+        let softcappower2 = new Decimal(.1)
 
 
         return softcappower2
