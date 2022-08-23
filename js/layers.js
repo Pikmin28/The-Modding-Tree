@@ -251,8 +251,8 @@ addLayer("x", {
         passiveGeneration() {return .1},
         effect() {
             if(layerShown)
-            return {cat: player[this.layer].points.add(1).pow(0.04*tmp.w.effect.cat),
-                mat: player[this.layer].points.add(1).pow(0.04*tmp.w.effect.cat)
+            return {cat: player[this.layer].points.add(1).pow(0.04*2),
+                mat: player[this.layer].points.add(1).pow(0.04*25)
         }},
         effectDescription() { // Optional text to describe the effects
             eff = this.effect();
