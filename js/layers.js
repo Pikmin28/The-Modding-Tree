@@ -258,7 +258,7 @@ addLayer("x", {
         }},
         effectDescription() { // Optional text to describe the effects
             eff = this.effect();
-            return "which are boosting buds by "+format(eff.cat)
+            return "which is boosting buds by "+format(eff.cat) + "which are boosting self by "+format(eff.mat)
         },
         upgrades: {
             11: {
