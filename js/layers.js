@@ -252,7 +252,7 @@ addLayer("x", {
             if(tmp.w.points > 0)
             return .1},
         effect() {
-            if(tmp.w.layerShown)
+            if(layerShown)
             return {cat: player[this.layer].points.add(1).pow(0.04*2),
                 mat: player[this.layer].points.add(1).pow(0.04*25)
         }},
