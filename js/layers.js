@@ -249,7 +249,7 @@ addLayer("x", {
         ],
         layerShown(){return player[this.layer].unlocked && hasUpgrade("x", 13)},
         passiveGeneration() {
-            if(tmp.w.points > 1)
+            (hasUpgrade('x', 12))
              return .1},
         effect() {
             if(layerShown)
