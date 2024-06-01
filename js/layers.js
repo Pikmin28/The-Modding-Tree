@@ -46,7 +46,7 @@ addLayer("p", {
         11: {
             title: "Send your red pikmin to collect pellets",
             description: "Double your pellet gain.",
-            cost: new Decimal(1)
+            cost: new Decimal(10)
         },
         12: {
             title: "Pikmin overworking",
